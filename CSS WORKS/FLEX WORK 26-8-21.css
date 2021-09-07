@@ -1,0 +1,42 @@
+.PARENT{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(255, 191, 71);
+
+    /* DISPLAY: FLEX USED TO EASILY FIT THE COLS IN PARENT IN ONE DIM */
+    display: flex;
+
+    /* JSUTIFY-CONTENT:SPACE BETWEEN IS USED TO HAVE SPACE BTW THE COLS */
+             /* justify-content: space-BETWEEN; */
+
+
+    /* JUSTFY CONTENT: SPACE EVENLY SPACES TO ALL BOXES */
+    /* justify-content: space-evenly; */
+
+    /*  JUSTIFY CONTENT:FLEX END - ALL TO END OF PARENT BOX */
+    /* justify-content: flex-end; */
+
+    /* JUSTIFY ALIGN CENTRE- ALL VERTICALL CENTERED */
+           /* align-items: center; */
+
+       /* JUSTIFY CONTENT:SPACE AROUND SAME AS SPACE EVENLY */
+           justify-content: space-around;
+}
+.col{
+    width: 100px;
+    height: 400px;
+}
+
+.col1{
+    background-color: salmon;
+}
+.col2{
+    background-color: seagreen;
+}
+
+.col3{
+    background-color: turquoise;
+}
+.col4{
+    background-color: violet;
+}

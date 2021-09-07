@@ -1,0 +1,41 @@
+.row{
+    border: solid 1px black;
+    background-color: blue;
+    width: 400px;height: 400px;
+}
+/* ABOLUTE POSITION */
+.col{
+    border: solid 1px hotpink;
+    width: 200px;height: 200px;
+    background-color: lightcoral;
+    position: absolute;
+    top: 105px;
+    left: 105px;
+}
+
+body{
+    height: 1400px;
+}
+
+
+/* FIXED POSITION */
+.fixed{
+    border: 2px solid blue;
+    background-color: chartreuse;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top:50%;
+    left: 75%;
+    
+}
+
+/* STICKY- POSITION  */
+.sticky{
+    border: 2px solid blue;
+    background-color: chartreuse;
+    width: 100px;
+    height: 100px;
+    position: sticky;
+    top:50%;
+    left:50%;

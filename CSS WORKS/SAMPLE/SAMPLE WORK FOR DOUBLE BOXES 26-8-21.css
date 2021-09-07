@@ -1,0 +1,50 @@
+.parentbox{
+    border: 2px solid black;
+    width: 518px ; height: 500px;
+    position: relative;
+   margin-bottom: 50px;
+
+}
+
+/* HERE FOR SAME COLUMNS, COMMON COMMAND COL IS GIVEN AND COLUMN IS STYLED  */
+
+.col{
+    border: 2px solid black;
+    width:100px; height: 500px;
+    color: crimson;
+    text-align: center;
+}
+
+.childbox1{
+    background-color: fuchsia;
+    left: 0px;
+    position: absolute;
+}
+.childbox2{
+    position: absolute;
+    top: 0px;
+    left: 102px;
+    background-color: lightsteelblue;
+}
+.childbox3{
+    position: absolute;
+    top: 0px;
+    left: 206px;
+    background-color: plum;
+}
+.childbox4{
+    position: absolute;
+    top: 0px;
+    left: 310px;
+    background-color: yellow;
+}
+.childbox5{
+    position: absolute;
+    top: 0px;
+    left: 414px;
+    background-color: salmon;
+}
+.third{
+    margin-left: 700px;
+    margin-top: -551px;
+}

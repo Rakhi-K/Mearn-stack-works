@@ -1,0 +1,21 @@
+div{
+    border: solid;
+    width: 40%;
+    height: 200px;
+}
+
+/* Margins are postioned for the div boxes
+
+we can use inspect and correct and change the values and use that in css*/
+.Box1{
+    position: absolute;
+    background-color: olive;
+    margin-top: 5%;
+    margin-left: 30%;
+}
+.Box2{
+    position: absolute;
+    background-color: rgb(158, 112, 218);
+    margin-top: 18%;
+    margin-left: 30%;
+}

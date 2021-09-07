@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lobster+Two:wght@700&display=swap');
+
+
+/* color coding as direct color displayed */
+h1{
+    color: blue;
+}
+
+
+/* as rgb format */
+#second{
+    color: rgb(114, 202, 63);
+}
+
+
+/* as from color picker and pasting the codes */
+.third{
+    color: #b24bb8; 
+}
+
+/* For fonts */
+
+
+
+div{
+
+    border: 2px solid rgb(55, 0, 255);
+    width: 20%;
+    background-color: rgb(139, 56, 0);
+    color: rgb(20, 220, 20);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#second2{
+  font-family:'Lobster Two', cursive;
+}
+
+
+/* for background - in body ,its styled
+images is provided as url 
+size is maintained to cover- full*/
+body{
+    background-color: hotpink;
+    background-image: url(./images/bacgrd\ 2.jpg);
+    background-size: cover;
+}
+

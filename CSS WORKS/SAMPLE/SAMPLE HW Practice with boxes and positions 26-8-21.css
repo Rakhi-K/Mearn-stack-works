@@ -1,0 +1,74 @@
+.parent1{
+    width: 800px; height: 700px;
+    border: 2px solid black;
+    background-color: cadetblue;
+    margin-bottom: 5%;
+    
+
+   
+
+    /* JUSTIFY -SPACE EQUALLY - FIRST COMMAND DISPLAY FLEX AND THEN JUSTIFY*/
+    /* HERE THE FIRST AND LAST BOXES HAS SPACE EVENLY */
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+
+.col{
+    width: 100px;height: 600px;
+    border: 2px solid chartreuse;
+    
+    
+}
+.child1{
+    background-color: crimson;
+   
+}
+.child2{
+    background-color: palegreen;
+   
+}
+.child3{
+    background-color: rebeccapurple;
+    
+}
+.child4{
+    background-color: sandybrown;
+    
+}
+.child5{
+    background-color: teal;
+   
+}
+.child6{
+    background-color: darkkhaki;
+    
+}
+.a{ 
+
+    /* HERE SPACE-BETWEEN MEANS SPACES ARE IN BETWEEN NOT AT FIRST AND LAST */
+    display: flex;
+    justify-content: space-between;
+}
+
+.b{
+  /* HERE SPACE AROUND AND SPACE EVENLY ARE SAME
+  SAME AS FIRST AND LAST SPACE */
+    display: flex;
+    justify-content: space-around;
+}
+
+.c{
+   
+    /* HERE THE BOXES MOVE TO LAST SIDE */
+  justify-content: flex-end;
+}
+
+.d{
+
+
+    /* HERE ALL ITEMS ARE ALIGNED TO VERTICALLY EQUALLY */
+    display: flex;
+    align-items: center;
+}
+

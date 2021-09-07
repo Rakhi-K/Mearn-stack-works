@@ -1,0 +1,17 @@
+/* here selectors are used
+1) tag
+2)id as #
+3)class as . */
+h1{
+    color: aqua;text-align: center;
+}
+
+/* id tag is used as # */
+#second{
+    color: blue; text-align: center;
+}
+
+/* class tag is used as . */
+.cls{
+    color: crimson;text-align: center;
+}

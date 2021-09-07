@@ -1,0 +1,39 @@
+.Parent{
+    width: 600px; height: 700px;
+    border: 2px solid black;
+    background-color: rgb(243, 7, 204);
+    display: flex;
+}
+
+.col{
+    width: 100px;height: 500px;
+    border: 1px solid black;
+
+    /* PADDING PROVIDED FORN ALIGNING 
+    THE CONTENTS IN THE BOX OF PARENT */
+    padding: 15px;
+}
+
+/* IF FLEX -NUMBER VALUE GIVEN, THE SIZE OF BOXES CHANGES ACC. WITHIN
+ THE PARENT BOX- EQUALLY TO VALUE GIVEN */
+
+.col1{
+    background-color: blue;
+    flex: 1;
+}
+.col2{
+    background-color: green;
+    flex: 2;
+}
+.col3{
+    background-color:palevioletred;
+    flex: 3;
+}
+.col4{
+    background-color:yellow;
+    flex: 4;
+}
+.col5{
+    background-color:red;
+    flex: 5;
+}

@@ -1,0 +1,20 @@
+.box1{
+      border: 1px solid black;
+      background-color: blanchedalmond;
+      width: 400px; height: 400px;
+
+      /* IF HERE RELATIVE IS GIVEN , THEN THE BOX2(WITHIN BOX1) MOVES WITH RESPECT TO BOX 1- POSITION MOVES. */
+      position: relative;
+
+}
+
+.box2{
+    border: 1px solid black;
+    background-color: chartreuse;
+    width: 160px; height: 160px;
+    position: absolute;
+    top: 126px;
+    left: 50%;
+
+
+}

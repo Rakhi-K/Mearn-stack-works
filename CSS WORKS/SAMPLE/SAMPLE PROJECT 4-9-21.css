@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Poller+One&display=swap');
+
+header{
+    background-color: indianred;
+    text-align: center;
+    padding: 5px;
+    
+}
+h2{
+    font-family:  'Poller One', cursive;
+    font-size: 50px;
+}
+
+
+/* a:active , a:visited IS ALSO DONE */
+a:hover{
+    color: navajowhite;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.paragraph{
+  background-color: thistle;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 2em;
+}
+h3{
+
+    /* FONT WEIGHT, SIZE IS ARRANGED */
+    font-style: italic;
+    text-decoration-line: underline;
+}
+small{
+    font-style: oblique;
+}
+
+h4{
+    text-decoration:underline;
+    color:darkgreen
+}
+
+
+/* HERE IN LIST SYMBOLS, WE CAN INSERT IMAGES AS list-style-image:url(./) */
+ul li{
+    list-style: square;
+}
+
+/* FOR NO SYMBOLS LIST-STYLE:NONE */
+ol li{
+    list-style:lower-roman;
+}
+
+.tbl{
+    border: black solid 2px;
+    
+}
+th{
+    border: black solid 1px;
+    
+    
+}
+td{
+    border: black solid 1px;
+    text-align: center;
+  
+}
+
+.parent{
+    border: solid black;
+    padding: 3%; margin-left: 30%;
+    width: 25%;
+    background-color: lightgreen;
+    border-radius: 50px;
+}
+.col{
+    border: midnightblue 1px solid;
+    padding: 2%;
+    background-color: khaki;
+    text-align: center;
+    border-radius: 50px;
+    width: 100%;
+}
+
+label{
+    display: block;
+   
+    
+}
+
+button{
+    padding: 2px;
+    margin-top: 20px;
+   margin-left: 90px;
+    
+}
+button:hover{
+    color: yellow;
+    padding: 3px;
+    
+}
+.reg{
+    background-color: olive;
+   
+}
+.can{
+    background-color: red;
+}
+
+.block{
+   padding: 1%;
+    float: left;
+    width: 33.3%;
+    border:green solid 2px;
+    box-sizing: border-box;
+}
+
+.parent2{
+    padding: 1%;
+    margin: 10%;
+    
+}
+.mainbar{
+    float: left;
+    border: mediumblue solid;
+    width:40%;
+    background-color: paleturquoise;
+}
+
+.sidebar{
+    float: right;
+    border: mediumblue solid;
+    width: 30%;
+    box-sizing: border-box;
+    background-color: paleturquoise;
+}
+
+.parent3{
+    border: 2px solid fuchsia;
+    background-color: gold;
+    color: black;
+    width: 600px;
+    height: 700px;
+    display: flex;
+}
+.colbox{
+ border: 1px solid black;
+ width: 100px;
+ height: 600px;
+ 
+}
+.ab{
+    background-color: brown;
+}
+.cd{
+background-color: cadetblue;
+}
+.ef{
+background-color: lawngreen;
+}
+.gh{
+background-color: salmon;
+}
+.ij{
+background-color: springgreen;
+}
+
+

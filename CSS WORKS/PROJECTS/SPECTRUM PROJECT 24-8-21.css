@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lobster+Two:wght@700&family=Suez+One&display=swap');
+h1{
+    font-family:'Suez One', serif ;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+body{
+    background-color: black;
+}
+div{
+margin-top: 5%;
+}
+
+div{
+    border-width: 20% ;
+    border: chartreuse;
+    width: 6%;
+    height: 150px;
+    border: solid black;
+}     
+    
+.b{
+    margin-left:30%;
+    margin-bottom: 5%;
+    background-color:#3e8541;
+    
+}
+.c{
+    margin-left: 38%;
+    margin-top: -13.3%;
+    background-color: #3e8565;
+  
+}  
+.d{
+     margin-left: 46%;
+     margin-top: -8.3%;
+     background-color:#3e7a85 ;
+}
+.e{
+    margin-left: 54%;
+    margin-top: -8.25%;
+    background-color: #3e5885;
+}
+.f{
+    margin-left: 62%;
+    margin-top: -8.25%;
+    background-color:#4b3e85 ;
+}
+
+.g{
+    margin-top: 2%;
+    margin-left: 22%;
+    background-color:#853e7d ;
+}
+
+.h{
+    margin-left: 30%;
+    margin-top: -8.26%;
+    background-color:#38ba79 ;
+    
+}
+.i{
+    margin-left: 38%;
+    margin-top: -8.26%;
+    background-color:#a4ba38 ;
+}
+
+.j{
+    margin-left: 46%;
+    margin-top: -8.26%;
+    background-color:#ba5238 ;
+}
+.k{
+    margin-left:54%;
+    margin-top:-8.26% ;
+    background-color: #38bab4;
+}
+.l{
+    margin-left: 62%;
+    margin-top: -8.26%;
+    background-color: green;
+}
+.m{
+    margin-left: 70%;
+    margin-top: -8.26%;
+    background-color: chartreuse;
+}
+.n{
+    margin-top: 2%;
+    margin-left: 14%;
+    background-color:blueviolet ;
+}
+
+.o{
+    margin-left:22%;
+    margin-top: -8.26%;
+    background-color: coral;
+}
+.p{
+    margin-left: 30%;
+    margin-top: -8.26%;
+    background-color: deeppink;
+}
+.q{
+    margin-left:38%;
+    margin-top: -8.26%;
+    background-color: gold;
+}
+.r{
+    margin-left: 46%;
+    margin-top: -8.26%;
+    background-color:indigo ;
+}
+.s{
+    margin-left: 54%;
+    margin-top: -8.26%;
+    background-color:lightslategray ;
+}
+.t{
+    margin-left:  62%;
+    margin-top: -8.26%;
+    background-color:mediumspringgreen ;
+
+}
+.u{
+    margin-left:  70%;
+    margin-top: -8.26%;
+    background-color:orangered ;
+}
+.v{
+    margin-left: 78%;
+    margin-top: -8.26%;
+    background-color:paleturquoise ;
+}

@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mate&display=swap');
+.cls{
+    margin-left: 43% ;
+    border: 2px solid white;
+    width: 300px;
+    text-align:center;
+    height:266px;
+    background-color:#dff7f3;
+    font-family:'Mate', serif ;
+    font-size: 22px;
+    
+
+}
+
+  .cls1{
+      border: black solid 0.1px;
+      width: 299px;
+      height: 49px;
+      margin-left: 43%;
+      text-align: center;
+      color: navy;
+     margin-top: 20px;
+     font-size: 20px;
+  }
+
+  body{
+      text-align: center;
+      margin-top: 5%;
+  }
+
+.cls2{
+    text-align: center;
+    color: white;
+   font-size: 22px;
+   background-color: #399647;
+   
+}
+.cls3
+{
+    margin-top: 1.5%;
+}
+

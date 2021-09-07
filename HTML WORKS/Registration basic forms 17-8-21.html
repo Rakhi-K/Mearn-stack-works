@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration forms</h1>
+
+    <!-- for forms -->
+    <!-- label is the first name
+         name given is the input
+        to join label & input we must use unique id so when we click the label, input highlights(pop out)
+          label - is "for what"
+          input is the name-type is text-->
+
+    <form action=""> 
+
+        <label for="name">First name</label>
+        <input type="text" id="name"><br>
+
+        <label for="email">Mail id</label>
+        <input type="email" id="email"><br>
+       
+        <!-- for PHONE NUMBERS input is text
+        same id is to given in label and id -->
+        <!-- <br> is to make it in block- to break -->
+        
+        <label for="phn">Phone number</label>
+        <input type="text" id="phn"><br>
+
+        <!-- for GENDER -->
+        <!-- for gender, input is radio for varying the detail and for button icon
+             for having the button icon selecting only one of the icon, name tag & lable
+            id is used as male and female
+        to have name for the icon we use lable icon for resp icon -->
+
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="male"><lable for="male">male</lable>
+        <input type="radio" name="gender" id="female"><lable for="female">female</lable><br>
+         
+        <!-- for ADDRESS- text area is used, cols & rows is needed -->
+        <label for="ad">Address</label>
+        <textarea name="" id="ad" cols="30" rows="10"></textarea><br>
+
+        <!-- for DROP DOWN  
+            for selecting - select name tag
+        for having options for selection use - option value tag -->
+
+        <label for="Places">Select place</label>
+        <select name="" id="Places">
+            <option value="">kochi</option>
+            <option value="">calicut</option>
+            <option value="">tvm</option>
+        </select><br>
+
+        <!-- for PASSWORDS
+        input is password , passwords not shown-->
+        <label for="pas">Password</label>
+        <input type="password" id="pas"><br>
+
+        <!-- for REGISTRATION OR SIGN IN last icon, button tag used -->
+        <button type="submit">Register</button>
+
+    </form>
+</body>
+</html>

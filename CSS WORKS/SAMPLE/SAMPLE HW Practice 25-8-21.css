@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate&display=swap');
+h1{
+  font-family: 'Mate', serif;
+  text-align: center;
+}
+
+div{
+   width: 100px;
+   height: 150px;
+   border: 2px solid black;
+   margin-top: 90px;
+   text-align: center;
+}
+
+.a{
+    margin-left: 509px;
+    
+
+}
+
+.b{
+    margin-left: 644px;
+    margin-top: -155px;
+    
+}
+.c{
+    margin-left: 775px;
+    margin-top: -155px;
+    
+}
+.d{
+    margin-left: 373px;
+   
+    
+}
+.e{
+    margin-left: 509px;
+    margin-top: -155px;
+    
+}
+.f{
+    margin-left: 644px;
+    margin-top: -155px;
+    
+}
+.g{
+    margin-left: 772px;
+    margin-top: -155px;
+    
+}
+.h{
+    margin-left:905px;
+    margin-top: -155px;
+}
+.i{
+    margin-left: 237px;
+    
+}
+.j{
+    margin-left:373px;
+    margin-top: -155px;
+}
+.k{
+    margin-left: 509px;
+    margin-top: -155px;
+    
+}
+.l{
+    margin-left: 644px;
+    margin-top: -155px;
+}
+
+.m{
+    margin-left: 772px;
+    margin-top: -155px;
+}
+.n{
+    margin-left: 905px;
+    margin-top: -155px;
+}
+.o{
+    margin-left: 1036px;
+    margin-top: -155px;
+}
