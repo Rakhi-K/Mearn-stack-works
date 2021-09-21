@@ -3,7 +3,7 @@ var num=7;
 
 //ternary operator- single line
 var res=num%2==0?"even":"odd"
-console.log(res);
+console.log(res);  
 
 //divisble by 3,5,15
 
