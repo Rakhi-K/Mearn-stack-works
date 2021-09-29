@@ -1,34 +1,52 @@
-// var arr1 = [10, 20, 21, 22]
-// var arr2 = [11, 12, 20, 21]
-// let a = 0;
+//COMMON ELEMENTS
 
-// for (let num of arr1) {
-//     if (a= let num of arr2 ;a<num; a++) {  //a=0, 0<10,
-//         a=num;
-//     }
-//     console.log(a);
-// }
+var arr1 = [10, 20, 21, 22]
+var arr2 = [11, 12, 20, 21]
+var count=0;  //to hve count of iteration
 
-
-var arr=[10,11,12,11,10]
-
-
-for (let amount of arr)  
-
-
-
-// var arr=[10,11,12,13,14]
+for (let num1 of arr1) {
+   for(let num2 of arr2){
+       if (num1==num2) {
+           console.log("common element",num1);
+           
+       }
+       count++
+   }
+}
+console.log(count);
 
 
-// for (let num of arr){
-
-//     if (num>=15) {
-//         console.log("element is found");
-//     }
-//     else{
-//         console.log("element not found");
-//     }
-// }
 
 
-        
+
+//DUPLICATE ELEMENTS
+// var arr = [10, 11, 12, 11, 10]
+
+
+// for (let amount of arr)
+
+
+//SEARCHING element  -- LINEAR SEARCHING-EACH ELEMENT IS SEARCHED IN ARRAY(COMPARED)
+
+var arra=[10,11,12,13,14]
+var element=13, flag=0;
+
+for (let num of arra){
+
+    if (num==element) {  //true case
+        flag+=1
+        break;
+    }
+    
+}
+
+if (flag==0){  //false case 
+  console.log("element not found");
+}
+
+else{
+    console.log("element found");
+}
+
+//TO AVOID LINEAR- BINARY IS USED
+
