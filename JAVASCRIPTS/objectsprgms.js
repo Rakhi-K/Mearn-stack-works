@@ -127,6 +127,7 @@ else{
 }
 console.log(student);
 
+
 for(let keys in student){
     console.log(keys);
     console.log(student[keys]);
@@ -158,9 +159,9 @@ for(let keys in student){
  console.log(wordcount);
 
 
+
+
  var pattern="ABCABB"
-
-
  var wordcount={}
 
  for (let char of pattern){
@@ -170,9 +171,26 @@ for(let keys in student){
          break;
      }
      else{
-         wordcount[char]=1
+         wordcount[char]=1 
      }
  }
  console.log(wordcount);
+
+
+
+
+ var arr=[10,20,10,1,20,13,21,10]
+ var numcount={}
+ for (let num of arr){
+     if (num in numcount) {
+         numcount[num]+=1
+     }
+     else{
+         numcount[num]=1
+     }
+ }
+ console.log(numcount);
+
+
 
  
