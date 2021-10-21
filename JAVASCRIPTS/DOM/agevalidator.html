@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Age </h1>
+     <input type="text" id="age" placeholder="enter age">
+     <button onclick="validateAge()">Validate</button>
+     <div id="result"></div>
+</body>
+
+<script>
+function validateAge(){
+        //.value- value in the text box selected
+         let mage=document.querySelector("#age").value; 
+
+         let html_div=document.querySelector("#result");
+         let data=``;
+         
+         if(mage<18){
+             
+            //  html_div.innerHTML="invalid data"  // or simply we can give this way- so no let data, html_div.innerhtml=data- needed
+            //  html_div.style.color="red"
+             data=`<p style="color:red">invalid data</p>`//for chNGING THE color
+         }
+         else{
+            // html_div.innerHTML="valid data"
+            //  html_div.style.color="green"
+             data=`<p style="color:green">valid data</p>`
+         }
+        html_div.innerHTML=data
+}
+</script>
+</html>

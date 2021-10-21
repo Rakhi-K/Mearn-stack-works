@@ -94,14 +94,14 @@ class Bank_details {
             let pwd = this.accounts[acno].password
             if (pwd == password) {
                 this.session["user"] = acno
-                // console.log("login success");
+                //console.log("login success");
                 return 1;
             }
             else {
-                // console.log("invalid password");
+                         //console.log("invalid password");
                 return 0;
             }
-            //  return pwd==password?1:0
+                         //return pwd==password?1:0
         }
 
         else {
@@ -118,7 +118,8 @@ class Bank_details {
 
 
     fundTransfer(to_acno, amount)  {
-        if (this.validateAccountNumber(to_acno)) {
+        if (this.validateAccountNumber(to_acno)) 
+        {
             let user=this.session["user"]
             let bal= this.balanceEnquiry()
             if (bal > amount) {
