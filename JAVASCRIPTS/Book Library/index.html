@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container w-25">
+        <h1 class="text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">BOOK
+            LIBRARY</h1>
+
+        <div class="border border-dark mt-5 p-3 mb-3" style=" background-color: #FFDEE9;
+       background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);">
+
+            <div class="p-3 mb-3">
+
+                <input type="text" id="bk_name" class="form-control" placeholder="Book Title Name">
+            </div>
+
+            <div class="p-3 mb-3">
+
+                <input type="text" id="bk_author" class="form-control" placeholder="Book Author Name">
+            </div>
+
+            <div class="p-3 mb-3">
+
+                <input type="text" id="bk_price" class="form-control" placeholder="Book Price">
+            </div>
+
+            <div class="p-3 mb-3">
+
+                <input type="text" id="bk_copies" class="form-control" placeholder="Book Copies">
+
+            </div>
+
+            <div class="p-3 mb-3 text-center">
+                <button onclick="book.addToDb()" class="btn btn-success">Add</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+  
+    <div class="container">
+        <h1>FETCH USER DATAS</h1>
+
+        <button onclick="fetchUsers()" class="btn btn-success">
+            Fetch Users
+        </button>
+
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Username</td>
+                <td>Email</td>
+            </tr>
+
+
+             <!-- for updating result in this -->
+            <tbody id="result">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <script>
+
+        function fetchUsers() {
+            var request = new XMLHttpRequest();
+            request.open("get", "https://jsonplaceholder.typicode.com/users");
+            request.send();
+
+
+            request.onreadystatechange = () => 
+            {
+                if (request.readyState == 4) 
+                {
+                    if (request.status > 199 && request.status < 300) {
+                        //  console.log(request.responseText);  - check whther deisplayed as string in console when button clicked
+
+                        //the result is in string- so parsed to obj
+                        let users = JSON.parse(request.responseText)
+                        populateValues(users);
+                    }
+                    else 
+                    {
+                        console.log("failed to load from server side");
+                    }
+                }
+            }
+        }
+             
+        function populateValues(users)
+        {
+                   let html_data=``;
+
+                   for(let user of users)
+                   {                              //fetching from the user data..name,username, email
+                       let uname= user.name;
+                       let userName= user.username;
+                       let mail= user.email;
+                    //    console.log(uname, userName, mail);
+
+                    html_data+= `<tr> <td> ${uname}</td> <td>${userName} </td> <td> ${mail} </td>   </tr>`
+                   }
+
+                 document.querySelector("#result").innerHTML= html_data;
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -50,10 +50,10 @@ console.log(emp_name);
 console.log(age);
 
 // + - concatination - joining
-console.log("hai i am " + emp_name + age + "years old");
+console.log("hai i am" + emp_name + age + "years old");
 
 //with comma ,
-console.log("hai i am Rakhi", emp_name, age, "years old");
+console.log("hai i am ", emp_name, age, "years old");
 
 
 var location_name = "kakkanad", company_name = "luminar"

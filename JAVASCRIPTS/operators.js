@@ -1,4 +1,4 @@
-// operators
+// operators used in javascript coding
 //arithematic,logical,relational
 
 //arthematic- +, -, *, /, %, **-exponential
@@ -39,9 +39,9 @@ console.log(~2);
 
 //increment and decrement operators -  ++, --
 var i=10;
-// console.log(++i);   - 11 is output
+console.log(++i);   //- 11 is output
 var i=10
 i+=10; // i=i+10; 10+10=20
-console.log();
+console.log(i);
 
 

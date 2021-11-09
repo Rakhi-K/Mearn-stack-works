@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">                             
 
 <head>
     <meta charset="UTF-8">
@@ -11,23 +11,28 @@
 
 <body>
     <h1>BANK APPLICATION</h1>
+     <form onsubmit="event.preventDefault();bank.createAccount()">
     <div class="parent">
-        <form action="">
-            <label for="name">First name</label> <br>
-            <input type="text" name="" id="fname" placeholder="first name">
-            <br>
-            <label for="accnum">Account number</label><br>
-            <input type="text" name="acc num" id="accnum" placeholder="account number">
-            <br>
-            <label for="pwd">Password</label><br>
-            <input type="password" name="" id="pwd" placeholder="password">
-            <br>
-            <label for="confirmpassword">Confirm Password</label><br>
-            <input type="password" name="" id="confirmpassword" placeholder="confirm password">
-            <br>
-            <button onclick="bank.createAccount()">Register</button>
-        </form>
+         
+        <label for="name">First name</label> <br>
+        <input type="text" name="" id="fname" placeholder="first name" required="true">
+        <br>
+        <label for="accnum">Account number</label><br>
+        <input type="text" name="acc num" id="accnum" placeholder="account number">
+        <br>
+        <label for="pwd">Password</label><br>
+        <input type="password" name="" id="pwd" placeholder="password">
+        <br>
+        <label for="confirmpassword">Confirm Password</label><br>
+        <input type="password" name="" id="confirmpassword" placeholder="confirm password">
+        <br>
+        <label for="bal">Balance</label><br>
+        <input type="text" name="bal" id="bal" placeholder="balance">
+        <br>
+        <button type="submit">Register</button>
+
     </div>
+</form>
 </body>
 <script src="./script.js"></script>
 
