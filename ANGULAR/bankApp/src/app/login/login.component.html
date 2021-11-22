@@ -1,0 +1,47 @@
+<body>
+
+        <div class="main" style="border:black solid; text-align: center; ">
+                <h1>Login</h1>
+
+                <p>{{aim}}</p>
+
+                
+                <!-- EVENT BINFING  - here STRING INTERPLATION, PROPERTY BINDING also added--> 
+                <!-- <label for="acc">Account number</label><br> -->
+
+                <!-- <input type="text" (change)= "accChange($event)"  [value]="acc" placeholder="acno" id="acc">
+                <br> -->
+                <!-- <input type="password" (change)= "pswdChange($event)"  name="" id="pass">
+                <br> -->
+
+
+                <!-- TEMPLATE TAG used -->
+                <!-- <input type="text" #acno [value]="acc" placeholder="acno" id="acc">
+                <br>    -->
+                <!-- <label for="pass">Password</label><br> -->
+        
+                <!-- <input type="password" #pswd  name="" id="pass">
+                <br> -->
+
+              <!-- TEMPLATE TAG used -->
+                <!-- <button (click)="login(acno,pswd)" style="background-color: rgb(132, 223, 132);">Login</button> -->
+
+
+
+                <!-- FOR TWO WAY BINGING - if this is in form tage- for ng model- a --in input name ="' is to be given"-->  
+                <label for="acc">Account number</label><br>
+                <input type="text" [(ngModel)]="acno" [value]="acc" placeholder="acno" id="acc">
+                <br>
+                <label for="pass">Password</label><br>
+                <input type="password" [(ngModel)]="pswd" name="" id="pass">
+                <br>
+                <button (click)="login()" style="background-color: rgb(132, 223, 132);">Login</button>
+                <br>
+                <p>New User? <a routerLink='register'>Register</a></p>
+                <br>
+        </div>
+
+</body>
+
+
+

@@ -2,7 +2,7 @@ var age=19;
 
 // if , if else 
 
-if (age>17) {
+if (age>17){
     console.log("you are eligible");
 } else {
     console.log("you are  not eligible");
@@ -91,10 +91,9 @@ else{
     console.log("all are equal");
 }
 
-
-
-
 console.log( "hello");
 
 
+    
 
+ 

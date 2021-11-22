@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Images/seventh.jpg" style="height: 650px;" class=" w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/secnd.jpg" style="height: 650px;" class=" w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/ninth.jpg" style="height: 650px;" class=" w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container">
+
+        <div style=" text-align: center; background-color: darkolivegreen;margin: 10px; padding: 20px;">
+            <h1>PINCODE WISE</h1>
+        </div>
+     
+<div style=" text-align: center;">
+
+    <input type="text" style=" text-align: center;" id="pin_num" style="font-size: large;  " placeholder="Enter Pincode" class="form-control" >
+    <br>
+    <input type="text" style=" text-align: center;" name="" id="date2" placeholder="Enter date(dd-mm-yyyy)" class="form-control">
+    <br>
+    <button class="btn-success" style="border-radius: 10px; width: 470px; font-size: large;"
+        onclick="fetchCowinDetailsByPin()">Fetch</button>
+</div>
+
+
+        <div style=" align-items: center ; margin-left: 500px;" 
+        id="result">
+    </div>
+
+    </div>
+    
+
+
+
+    
+    
+</body>
+
+<script>
+
+
+    function fetchCowinDetailsByPin() {
+        let pincodenum = pin_num.value;
+        let day2 = date2.value;
+
+        fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincodenum}&date=${day2}`).then(res => res.json()).then(data => displayValues(data))
+
+    }
+
+    function displayValues(data) {
+        let hospital = data.sessions[0].name;
+        let add = data.sessions[0].address;
+        let blockname = data.sessions[0].block_name;
+        let pin = data.sessions[0].pincode;
+        let time_from = data.sessions[0].from;
+        let time_to = data.sessions[0].to;
+        let avl_dose = data.sessions[0].available_capacity;
+        let vacc_name = data.sessions[0].vaccine
+        let age = data.sessions[0].min_age_limit;
+        let avl_dose_1 = data.sessions[0].available_capacity_dose1;
+        let avl_dose_2 = data.sessions[0].available_capacity_dose2;
+        let fee = data.sessions[0].fee;
+        let slot = data.sessions[0].slots;
+        // console.log(hosp_name);
+
+
+
+        let html_data = `  <div style="width: 500px;" align-items: center">
+       <div class="card-body">
+    <h5 class="card-title">VACCINE AVAILABLE</h5>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Hospital Name:${hospital}</li>
+    <li class="list-group-item">Address:${add}</li>
+    <li class="list-group-item">Block Name:${blockname}</li>
+    <li class="list-group-item">Pincode:${pin}</li>
+    <li class="list-group-item">Time From:${time_from}-${time_to}</li>
+    <li class="list-group-item">Vaccine Name:${vacc_name}</li>
+    <li class="list-group-item">Minimum Age Limit:${age}</li>
+    <li class="list-group-item">Available Dose:${avl_dose}</li>
+    <li class="list-group-item">Availability- Dose 1:${avl_dose_1}</li>
+    <li class="list-group-item">Availability- Dose 2:${avl_dose_2}</li>
+    <li class="list-group-item">Fees:${fee}</li>
+    <li class="list-group-item">Slot Timimgs:<br>${slot}</li>
+  </ul>
+</div>
+    
+     </div>`;
+
+        document.querySelector("#result").innerHTML = html_data;
+
+    }
+</script>
+
+</html>

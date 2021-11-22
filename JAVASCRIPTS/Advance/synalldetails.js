@@ -26,11 +26,13 @@
 //https://jsonplaceholder.typicode.com/users/1- first user only-user/1- id=1
 
 
+//when js is taken\- it creates a execution context- with 2 objs- this(client side -log runs(in ie console)), global(server side-log runs(in node.js))
+
 
 
 
                                
-//here call stack & web api, call back queue
+//here call stack & web api, call back queue,event loop
 // console.log("line 1");
 // setTimeout(()=>{
 //     console.log("line 2");
@@ -53,7 +55,7 @@
 
 
 
-//Promise - also passes to web api- 3STAGES- FULFILL(settled), PENDING, REJECT
+//Promise - also passes to web api- 3STAGES- FULFILL(settled), PENDING, REJECT- contsiner for future
  var pro= new Promise((resolve, reject)=>{
      let watch_time=2;
      if(watch_time>1){
@@ -92,3 +94,5 @@ var mypro= new Promise((resolve , reject)=>{
 })
 
 mypro.catch(error=>console.log(error))
+
+

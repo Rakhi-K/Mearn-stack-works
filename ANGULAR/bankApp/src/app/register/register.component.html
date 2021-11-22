@@ -1,0 +1,21 @@
+
+<div class="main" style="border:black solid; text-align: center; ">
+    <h1>REGISTER NEW USER</h1>
+
+    
+    <label for="uname">User Name</label>
+    <br>
+    <input type="text"  placeholder="user name" id="unamme">
+    <br>
+    <label for="acc">Account number</label>
+    <br>
+    <input type="text" [(ngModel)]="acno" placeholder="acno" id="acc">
+    <br>
+    <label for="pass">Password</label>
+    <br>
+    <input type="password" [(ngModel)]="pswd" name="" id="pass">
+    <br>
+    <button (click)="register()" style="background-color: rgb(132, 223, 132);">Register</button>
+    <br>
+    
+</div>

@@ -1,0 +1,50 @@
+
+<form (ngSubmit)="deposit()">
+    <H1 style="text-align: center;">WELCOME USER</H1>
+    <div class="main " style="border:black solid; text-align: center;">
+
+    <h1>DEPOSIT FORM</h1>
+
+    <label for="acc">Account number</label>
+    <br>
+    <input type="text" [(ngModel)]="acno" placeholder="acno" id="acc">
+    <br>
+    <label for="pass">Password</label>
+    <br>
+    <input type="password" [(ngModel)]="pswd" name="" id="pass">
+    <br>
+    <label for="uname">Amount deposited</label>
+    <br>
+    <input type="text"  placeholder="amount" id="amount">
+    <br><br>
+    <button type="submit" value="Deposit" style="background-color: rgb(132, 223, 132);">Deposit</button>
+    <br>
+    </div> 
+</form>
+
+<br><br>
+<form (ngSubmit)="deposit()">
+
+   
+ <div class="main" style="border:black solid; text-align: center; ">
+    <h1>WITHDRAWAL FORM</h1>
+
+    
+    <label for="acc">Account number</label>
+    <br>
+    <input type="text" [(ngModel)]="acno" placeholder="acno" id="acc">
+    <br>
+    <label for="pass">Password</label>
+    <br>
+    <input type="password" [(ngModel)]="pswd" name="" id="pass">
+    <br>
+    <label for="uname">Amount withdrawe</label>
+    <br>
+    <input type="text"  placeholder="amount" id="amount">
+    <br><br>
+    <button type="submit" value="Withdrawal" style="background-color: rgb(132, 223, 132);">Withdrawn</button>
+    <br>
+    
+</div>
+</form>
+

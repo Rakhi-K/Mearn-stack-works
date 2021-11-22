@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>RESULTS</h1>
+    <div id="result"></div>
+    <button onclick="fetchUsers()">
+        Action
+     </button>
+
+    <script>
+        //ASYNC, AWAIT - INSTEAD OF PROMISE
+
+        
+        function fetchUsers() 
+        {
+            let getData = async () => {
+                try {
+                    let res = await fetch("https://cdn-api.co-vin.in/api/v2/admin/location/states")
+                    let data = await res.json();
+                    display(data);
+                }
+                catch (error) {
+                    console.log("error");
+                }
+            }
+            getData()
+        }
+
+
+        // function display(data) {
+        //     // console.log(data);
+            
+        //     let html_data = `<div class="btn-group">
+        //      <ul class="dropdown-menu">
+        //      <li><a class="dropdown-item" href="#">Action</a></li>
+        //      <li><a class="dropdown-item" href="#">Another action</a></li>
+        //      <li><a class="dropdown-item" href="#">Something else here</a></li>
+        //     <li><hr class="dropdown-divider"></li>
+        //     <li><a class="dropdown-item" href="#">Separated link</a></li>
+        //     </ul>
+        //      </div>`
+        // }
+
+        function display(data)
+        {
+            // console.log(data["states"][0].state_name)
+                //    let html_data=``;
+
+                   for(let dat of data.states)
+                   {                              
+                       let name=  dat["state_name"];
+                       console.log(name);
+
+                    // html_data+= `<tr> <td> ${uname}</td> <td>${userName} </td> <td> ${mail} </td>   </tr>`
+                   }
+
+                //  document.querySelector("#result").innerHTML= html_data;
+
+        }
+
+    </script>
+</body>
+
+</html>
