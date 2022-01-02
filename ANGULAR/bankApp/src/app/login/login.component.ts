@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -9,16 +10,22 @@ import { DataService } from '../services/data.service';
 })
 export class LoginComponent implements OnInit {
 
-  aim = "PERFECT BANKING PARTNER"  //for change in string
-  acc = "Account number please"      //proprty binding
+  // aim = "PERFECT BANKING PARTNER"  //for change in string
+  // acc = "Account number please"      //proprty binding
 
 
-  acno = ""
-  pswd = ""
+  // acno = ""
+  // pswd = ""
 
 
 
-  constructor(private routerLogin: Router, private ds: DataService) { }
+  loginForm = this.fb.group({
+
+    acno: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+    pswd: ['', [Validators.required, Validators.pattern('[ a-zA-Z0-9]*')]]   //if spcl charcters needed, we put ?><.,*&%^$#@!
+  })
+
+  constructor(private routerLogin: Router, private ds: DataService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
@@ -83,21 +90,70 @@ export class LoginComponent implements OnInit {
   //     }
 
 
-  login()
-  {
-    //for two binding
-    var acno = this.acno
-    var pswd = this.pswd
+  // login()
+  // {
 
-    let result = this.ds.login(acno,pswd)
-    if (result) 
-    {
-      alert("login success")
-      this.routerLogin.navigateByUrl('dashboard')
+  //   //    //for two binding
+  //   // var acno = this.acno
+  //   // var pswd = this.pswd
 
+
+
+  //   var acno= this.loginForm.value.acno;
+  //   var pswd= this.loginForm.value.pswd;
+
+
+  //   if(this.loginForm.valid)
+
+  //   {
+  //      let result = this.ds.login(acno,pswd)
+  //   if (result) 
+  //   {
+  //     alert("login success")
+  //     this.routerLogin.navigateByUrl('dashboard')
+
+  //   }
+
+
+  //   }
+
+
+  // }
+
+  login() {
+
+    //    //for two binding
+    // var acno = this.acno
+    // var pswd = this.pswd
+
+
+
+    var acno = this.loginForm.value.acno;
+    var pswd = this.loginForm.value.pswd;
+
+
+    if (this.loginForm.valid) {
+      this.ds.login(acno, pswd)
+        .subscribe((result:any) => {
+          if (result) {
+            alert(result.message)
+            localStorage.setItem("currentUserName", JSON.stringify(result.currentUserName))
+            localStorage.setItem("token", JSON.stringify(result.token))
+            localStorage.setItem("currentAcno", JSON.stringify(result.currentAcno))
+            this.routerLogin.navigateByUrl('dashboard')
+          }
+        },
+        (result: any) => {
+          alert(result.error.message)
+        }
+        )
     }
-
+    else{
+    alert("invalid form")
+    }
   }
+
+
 }
 
 

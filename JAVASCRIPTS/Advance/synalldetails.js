@@ -42,7 +42,8 @@
 
 
 // console.log("first console");                 // here first this
-// setTimeout(()=>{
+// 
+//setTimeout(()=>{
 //     console.log(" 1st set time out ");
 // },3000)                                        //last this
 

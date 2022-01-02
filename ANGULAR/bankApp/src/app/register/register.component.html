@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="main" style="border:black solid; text-align: center; ">
     <h1>REGISTER NEW USER</h1>
 
@@ -18,4 +18,38 @@
     <button (click)="register()" style="background-color: rgb(132, 223, 132);">Register</button>
     <br>
     
-</div>
+</div>-->
+
+
+<!-- [fromgroup]=registerfrom - modal from is given -->
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="main" style="border:black solid; text-align: center; ">
+        <h1>REGISTER NEW USER</h1>
+    
+        
+        <label for="uname">User Name</label>
+        <br>
+
+        <!-- here instead of ngmodel we use formcontrolname -->
+        <input type="text"  formControlName="uname" placeholder="user name" id="unamme">  
+        <br>
+         <div *ngIf="(this.registerForm.get('uname')?.touched || this.registerForm.get('uname')?.dirty) && this.registerForm.get('uname')?.errors"  id="error">Invalid Username</div>
+        
+         <label for="acc">Account number</label>
+        <br>
+        <input type="text" formControlName= "acno" placeholder="acno" id="acc">   
+        <br>
+        <div *ngIf="(this.registerForm.get('acno')?.touched || this.registerForm.get('acno')?.dirty) && this.registerForm.get('acno')?.errors"  id="error">Invalid Account number</div>
+
+
+        <label for="pass">Password</label>
+        <br>
+        <input type="password" formControlName= "pswd" name="" id="pass">
+        <br>
+        <div *ngIf="(this.registerForm.get('pswd')?.touched || this.registerForm.get('pswd')?.dirty) && this.registerForm.get('pswd')?.errors"  id="error">Invalid Password</div>
+
+        <button type="submit" style="background-color: rgb(132, 223, 132);">Register</button>
+        <br>
+        
+    </div>
+    </form>

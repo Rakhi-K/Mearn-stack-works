@@ -84,7 +84,7 @@ while ((pos1<arr1.length) & (pos2<arr2.length))      // while 0<5 (till 4 i,e le
   }
   count++;
 }
-console.log("iteration count",count);
+ console.log("iteration count",count);
 
 
 

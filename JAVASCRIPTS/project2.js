@@ -1,50 +1,50 @@
 //for having even or odd
 
-// var num=5;
-// var i=1;
-// while (i<=5)
-//  {
-//     if (i%2!=0)  not equal to zero for odd....or if(i%2==0) for even
-//      {
-//         console.log(i);
-//     }
-//     i++
-// }
+var num=5;
+var i=1;
+while (i<=5)
+ {
+    if (i%2!=0)  //not equal to zero for odd....or if(i%2==0) for even
+     {
+        console.log(i);
+    }
+    i++
+}
 
 // for displaying numbers
-// var num=5;
-// var i=5;
-// while (i>=0) 
-//  {
-//      console.log(i);
-//      i--;
-// }
+var num=5;
+var i=5;
+while (i>=0) 
+ {
+     console.log(i);
+     i--;
+}
 
 
 // //MULTIPICATION
-// var num=10;
-// var i=1;
-// while (i<=10) 
-// {
-//   console.log(i*i); 
-//   i++ 
-// }
+var num=10;
+var i=1;
+while (i<=10) 
+{
+  console.log(i*i); 
+  i++ 
+}
 
 
 
 
 
 // //factorial
-// var num=5;
-// var i=1;
-// var fact=1;
+var num=5;
+var i=1;
+var fact=1;
 
-// while (i<=num) 
-// {
-//     fact=fact*i;  //1*1=1, 1*2=2, 2*3
-//    i++ ; //1+1=2, 2+1=3
-// }
-// console.log(fact);
+while (i<=num) 
+{
+    fact=fact*i;  //1*1=1, 1*2=2, 2*3
+   i++ ; //1+1=2, 2+1=3
+}
+console.log(fact);
 
 
 //SUM TILL 10

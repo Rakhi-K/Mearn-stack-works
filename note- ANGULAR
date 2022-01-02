@@ -1,0 +1,55 @@
+
+
+
+                            Server creation - Express 
+
+
+                1. create server folder
+
+                2. install package.json - npm init
+
+                3. create index.js
+
+                4. install express - npm i express
+
+                5. Import express in index.js 
+
+                6. create app using express
+
+                7. set port
+
+                8. Run server- node index.js
+
+                9. define router : - expressApp.HTTPmethod(path,call back function)
+
+                10. RUN SERVER - nodemon index.js
+
+                11. install & import session: npm i express-session
+
+                12. Middlewares - 
+
+                    12.1 Application specific Middlewares
+
+                    12.2 router Level Middlewares
+
+                13. JSON Web Token (JWT) - npm i jsonwebtoken
+
+                    13.1 Token Generation
+
+                    13.2 Token Validation
+
+                14. MongoDB Connection: 
+
+                    14.1 install mongoose : syntax: npm i mongoose
+
+                    14.2 Import mongoose
+
+                    14.2 Using connection string to connect mongoDb with server
+
+                    14.3 Model created  
+
+                15. Solving Asynchronous events - promise 
+
+                    15.1 then used to defined resolved state 
+
+                16. Cors - Cross origin resourse sharing { npm i cors }

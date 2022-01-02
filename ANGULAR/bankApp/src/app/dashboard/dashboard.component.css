@@ -1,0 +1,31 @@
+.main{
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 420px;
+    top: 60%;
+    left: 50%;
+    box-sizing: border-box;
+}
+.main1{
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 420px;
+    top: 125%;
+    left: 50%;
+    box-sizing: border-box;
+}
+
+#error{
+    color:red
+}
+
+.c1{
+    background-color: gray;
+    opacity: 0.2;
+}

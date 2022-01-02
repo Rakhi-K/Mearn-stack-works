@@ -1,0 +1,103 @@
+
+
+
+                                Angular -( localhost:4200 )
+{
+    project creation: syntax: ng new projec_name --routing
+
+    project run: syntax: ng serve --open
+
+    Component creation: syntax: ng g c Component_name
+
+    service creation: syntax: ng g s service_name
+
+    directive creation: syntax: ng g d directive_name
+
+}
+
+
+             1. Component - { html, css, ts}- Root Component - AppComponent
+
+             2. Module - Root Module - AppModule
+
+             3. Data Binding
+
+                3.1 One way Binding - data flow in 1 direction
+
+                    3.1.1 From Component to View 
+
+                        3.1.1.1 String Interpolation / Interpolation  - syntax: {{expression}}
+
+                        3.1.1.2 Property Binding - syntax: [binding-target] ="binding-source"
+
+                    3.1.2 From View to Component
+
+                        3.1.2.1 Event Binding - syntax: (event)="function-call"
+
+                        3.1.2.2 Event Binding using $event - syntax: (event)="function-call($event)"
+
+                        3.1.2.3 Template referencing variable - syntax: #variable_name
+
+                3.2 Two way Binding - data flow in 2 direction( ngModel - FormsModule ) syntax: [(ngModel)]="variable_name"
+                        if ngModel in form tag then set name Property
+
+
+             4. Angular Routing
+
+             5. Dependency Injection - ( In constructor ) syntax: object : dependent_class_name
+
+             6. Angular Services 
+             
+             7. ngSubmit 
+
+             8. Angular forms
+
+                8.1 Template Driven Angular Forms
+
+                8.2 Model Driven Angular Forms
+
+                    8.2.1 Reactive Forms - For Validating a web page (ReactiveFormsModule)- 
+                        { Form group , Form Array, FormControl Name}            
+
+             9. Angular Directives - DOM Manipulate
+
+                9.1 Component Directives 
+
+                9.2 Structural Directives - syntax: *
+
+                    9.2.1 ngIf - syntax: *ngIf="condition"
+
+                    9.2.1 ngFor 
+
+                9.3 Attribute directive
+
+                    9.3.1 Using inbuilt method - ngClass
+
+                    9.3.2 Userdefined 
+
+
+            10. Local Storage
+
+                10.1 SetItem - store value
+
+                10.2 getItem - get value
+
+                10.3 removeItem - to remove value from local storage
+
+            11. HttpClientModule 
+
+                11.1 Inject HttpClient in data service
+
+            12. RXJS (Reactive Extensions for JS) - Solve Asynchronous events
+
+                12.1 Observable - .subscribe()
+
+            13. Angular pipes (syntax: expression | pipe operator[:pipe Argument])
+
+            14. Parent - child Communication
+
+                14.1 Parent to child data shairing - Input decorator
+
+                14.2 Child to parent data shairing - Output decorator
+
+            15. EventEmitter - to generate userdefined events

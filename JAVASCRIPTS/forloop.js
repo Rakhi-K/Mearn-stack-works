@@ -31,7 +31,6 @@ for(let i=2; i<num; i++){              //if this condiion is true
 console.log(flag==0?"prime":"not prime");
 
 
-
 //for having cubes within limit.
 
 var num=2;
@@ -76,7 +75,7 @@ for(i=1; i<=30; i++){
      console.log(str);
  }
 
- 123,123,123
+ //123,123,123
  for(let row=1; row<=3; row++){
     let str="";
     for(let col=1; col<=3;col++){

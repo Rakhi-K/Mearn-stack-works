@@ -1,9 +1,9 @@
 <body>
 
-        <div class="main" style="border:black solid; text-align: center; ">
+        <!-- <div class="main" style="border:black solid; text-align: center; ">
                 <h1>Login</h1>
 
-                <p>{{aim}}</p>
+                <p>{{aim}}</p> -->
 
                 
                 <!-- EVENT BINFING  - here STRING INTERPLATION, PROPERTY BINDING also added--> 
@@ -28,7 +28,11 @@
 
 
 
-                <!-- FOR TWO WAY BINGING - if this is in form tage- for ng model- a --in input name ="' is to be given"-->  
+                <!-- FOR TWO WAY BINGING - if this is in form tage- for ng model- a --in input name ="' is to be given"-->
+                
+                
+         <!-- <div class="main" style="border:black solid; text-align: center; ">
+                <h1>Login</h1>
                 <label for="acc">Account number</label><br>
                 <input type="text" [(ngModel)]="acno" [value]="acc" placeholder="acno" id="acc">
                 <br>
@@ -37,9 +41,35 @@
                 <br>
                 <button (click)="login()" style="background-color: rgb(132, 223, 132);">Login</button>
                 <br>
-                <p>New User? <a routerLink='register'>Register</a></p>
+                <p>New User? <a style="color: white;" routerLink='register'>Register</a></p>
+
                 <br>
-        </div>
+        </div> -->
+
+
+
+<form [formGroup]="loginForm" (ngSubmit)="login()"> 
+        <div class="main" style="border:black solid; text-align: center; ">
+               <h1>Login</h1>
+               <label for="acc">Account number</label><br>
+               <input type="text" formControlName="acno" name="" placeholder="acno" id="acc">
+               <br>
+
+               <div *ngIf="(this.loginForm.get('acno')?.touched || this.loginForm.get('acno')?.dirty) && this.loginForm.get('acno')?.errors"  id="error">Invalid Account number</div>
+
+               <label for="pass">Password</label><br>
+               <input type="password" formControlName="pswd" name="" id="pass">
+               <br>
+
+               <div *ngIf="(this.loginForm.get('pswd')?.touched || this.loginForm.get('pswd')?.dirty) && this.loginForm.get('pswd')?.errors"  id="error">Invalid Password</div>
+              
+               <button  type="submit" style="background-color: rgb(132, 223, 132);">Login</button>
+               <br>
+               <p>New User? <a style="color: white;" routerLink='register'>Register</a></p>
+
+               <br>
+       </div>
+</form>
 
 </body>
 

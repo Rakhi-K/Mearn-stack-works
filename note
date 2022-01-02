@@ -1,0 +1,120 @@
+
+
+for creating NODE.JS
+node.js - asynchrounous programming- dnt wait for response- take up the next request-
+Express- is the simplest easiest way of framework for node.js
+
+1)create a folder for bannk server side
+- in that in command- npm init-- for installing package.json
+
+- in that create-- index.js file\
+
+- then install express in commanand propt- -npm i express
+ 
+- import express to node js-- const express= require('express')
+
+- create app using express -- const app =express()
+
+- set port - call back function- caaling within a functn- -
+ app.listen(3000,()=>{
+    console.log("Server started at port number 3000");
+})
+
+- then in command propt- node index.js- enter -server created
+
+- DEFINE A DEFAULT ROUTER-page loaded  -- 
+       for that-- nmlde app.get('path',arrow funt(req,res)=>{
+           res.send('server started')
+       }) ---
+        for that-- app.get('/',(req,res)=>{
+           res.send('server started')
+       })
+
+- EACH TIME ANY CHANGE SERVER IS STOPPED (CNTRL C) AND RUN AGAIN- SO TO AVOID THAT- INSTALL 'NODEMON'- npm i -g nodemon and to run- use now use - nodemon index.js -
+
+- in ndode.js- only get methid is displayed in brower - fro other put ,post, patch,delete- thunderclient postman is used
+
+-100-199- informational 
+-200-299- success
+-300-399- redirectional
+-400-499- client side error
+-500-599 - server side error
+
+
+
+  -*** FOR AUTHENTICATION - SESSION AND JWT TOKEN USED***
+  - ***SESSION***
+    - EXPRESS-SESSION INSTALLATION
+    - install session -- npm i express-session
+
+    -MIDDLEWARE
+   -1)Application specific middleware - for whole appliaction
+   -2) router specific middleware- specific req 
+
+  
+-***JWT TOKEN- JSON WEB TOKEN ***
+   - install - npm i jsonwebtoken
+    - 2 method-  token genertaion , token validation
+
+
+
+
+
+                         ****MONGO DB****
+                         
+     - to see mongodb shell-  go to prgms in c drive - mongodb- bin-mongo-in that
+                          ****methods****
+     - show dbs- to see dbs
+
+     - use bank -to use any db - switch to bank dbs
+
+     - show collection
+
+     - db.users.find({"acno":1000})  or db.users.find()  - users - is colleection name
+
+     - to insert - db .users.insertOne({"name":"Test"})
+
+     - new entry - db.users.insertOne({"acno":1002,"uname":abc,"pswd":1002,})
+
+     - delete - db.users.deleteOne({"name":"test"}) and refrsh
+
+     - db.users.find({$or : [{"acno":1000},{"acno":1001}]})
+
+     - for updating - db.users.updateOne({"name":"Test"},{$set: {"name":"Test1"}})
+     
+     -- if name doesnt exist- so this adds- changes and updates- db.users.updateOne({"name":"Test"}, {$set:{"name":"Test1}},{upsert:true})
+     -balance greter thn 3000- list out - find used - mongodb documentation pdf
+
+
+
+     --**** Mongodb connection to node .js****
+
+     - mongoose  3rd party lib is used for connection- for install chynm- npm i mongoose
+  
+        })  
+        
+    - export model
+       - module.exports={
+         User
+       }
+
+
+
+     -cross origin resource sharing- CORS  - SERVE END - install chynm
+     -insatll - npm in cors in bank server folder
+     - in index.js- import and use cors
+     - in bank app- httpClientModule import in app.module
+     - inject HttpClientModule in data sevice constructor - and in register class
+     - in sngulr- to handle async events to resolve - observable and observer is used - RXJS (reactive extension in js)
+     -                     - in observable-  ".subscribe()" 
+
+--angular piping
+ syntax= expression | pipe operator [:pipe Argument]
+ prebuilt pipe in angular- search angular ipes in google
+
+
+ -PARENT TO CHILD COMMUNICATION --
+    - PARENT TO CHILD - we use input decorative
+    - CHILD TO PARENT - we use output decorative
+
+ - animmation topic-    

@@ -1,50 +1,199 @@
-
-<form (ngSubmit)="deposit()">
+<!-- 
+<form  (ngSubmit)="deposit()">
     <H1 style="text-align: center;">WELCOME USER</H1>
     <div class="main " style="border:black solid; text-align: center;">
 
-    <h1>DEPOSIT FORM</h1>
+    <h1 style="color: white;">DEPOSIT FORM</h1>
 
     <label for="acc">Account number</label>
     <br>
-    <input type="text" [(ngModel)]="acno" placeholder="acno" id="acc">
+    <input type="text" [(ngModel)]="acno" name="acno" placeholder="acno" id="acc">
     <br>
     <label for="pass">Password</label>
     <br>
-    <input type="password" [(ngModel)]="pswd" name="" id="pass">
+    <input type="password" [(ngModel)]="pswd" name="pswd" id="pass">
     <br>
-    <label for="uname">Amount deposited</label>
+    <label for="amount">Amount deposited</label>
     <br>
-    <input type="text"  placeholder="amount" id="amount">
+    <input type="text"   [(ngModel)]="amount" name="amount" placeholder="amount" id="amount">
     <br><br>
-    <button type="submit" value="Deposit" style="background-color: rgb(132, 223, 132);">Deposit</button>
+    <button type="submit" value="Deposit" style="background-color: rgb(132, 223, 132); ">Deposit</button>
     <br>
     </div> 
 </form>
 
 <br><br>
-<form (ngSubmit)="deposit()">
+<form (ngSubmit)="withdrawal()">
 
    
- <div class="main" style="border:black solid; text-align: center; ">
-    <h1>WITHDRAWAL FORM</h1>
+ <div class="main1" style="border:black solid; text-align: center; ">
+    <h1 style="color: white;">WITHDRAWAL FORM</h1>
 
     
     <label for="acc">Account number</label>
     <br>
-    <input type="text" [(ngModel)]="acno" placeholder="acno" id="acc">
+    <input type="text" [(ngModel)]="acno1" name="acno1"  placeholder="acno" id="acc">
     <br>
     <label for="pass">Password</label>
     <br>
-    <input type="password" [(ngModel)]="pswd" name="" id="pass">
+    <input type="password" [(ngModel)]="pswd1" name="pswd1" id="pass">
     <br>
-    <label for="uname">Amount withdrawe</label>
+    <label for="amount">Amount withdrawn</label>
     <br>
-    <input type="text"  placeholder="amount" id="amount">
+    <input type="text"   [(ngModel)]="amount1" name="amount1"   placeholder="amount1" id="amount">
     <br><br>
-    <button type="submit" value="Withdrawal" style="background-color: rgb(132, 223, 132);">Withdrawn</button>
+    <button type="submit" value="Withdrawal" style="background-color: rgb(132, 223, 132);">Withdrawal</button>
     <br>
     
 </div>
+</form> -->
+
+
+<!-- FOR VALIDATING -->
+<div>
+
+<form [formGroup]="depositeForm" (ngSubmit)="deposite()" >
+    
+                                          <!-- //***FOR HAVING THE USER NAME DISPLAYED*** -->
+    <H1 style="text-align: center ; color:white">WELCOME {{username}}</H1>
+    <p style="color:white">Login Date (Unformatted):{{ldate}} </p>
+     
+    <p style="color:white">Login Date (formatted- using pipes):{{ldate | date :'shortDate' }} </p>
+    <!-- HERE DIFF LIKE- DATE AND UPPERCASE WE USE "|"  OR ELSE SAME IN DATE ITSELF :"SHORT" -->
+    <p style="color:white">Login Date (formatted- using pipes):{{ldate | date |uppercase}} </p>  - 
+
+       <a style="color:white" routerLink="/transaction">View Transaction balance</a>
+
+
+    
+
+    <div  [ngClass]=" acno? 'c1':'' " class="main " style="border:black solid; text-align: center;">
+
+    <h1 appHighlight style="color: white;">DEPOSITE FORM</h1>
+
+    <label for="acc">Account number</label>
+    <br>
+    <input type="text" formControlName="acno" name="acno" placeholder="acno" id="acc">
+    <br>
+
+    <div *ngIf="(this.depositeForm.get('acno')?.touched || this.depositeForm.get('acno')?.dirty) && this.depositeForm.get('acno')?.errors"  id="error">Invalid Account number</div>
+    <br>
+    <label for="pass">Password</label>
+    <br>
+    <input type="password" formControlName="pswd" name="pswd" id="pass">
+    <br>
+    <div *ngIf="(this.depositeForm.get('pswd')?.touched || this.depositeForm.get('pswd')?.dirty) && this.depositeForm.get('pswd')?.errors"  id="error">Invalid Password</div>
+    <br>
+    <label for="amount">Amount deposited</label>
+    <br>
+    <input type="text"   formControlName="amount" name="amount" placeholder="amount" id="amount">
+    <br><br>
+    <div *ngIf="(this.depositeForm.get('amount')?.touched || this.depositeForm.get('amount')?.dirty) && this.depositeForm.get('amount')?.errors"  id="error">Invalid </div>
+    <br>
+    <button type="submit"  style="background-color: rgb(132, 223, 132); ">Deposit</button>
+    <br>
+    </div> 
 </form>
 
+<br><br>
+
+
+<form [formGroup]="withdrawalForm" (ngSubmit)="withdrawal()">
+ <div [ngClass]=" acno? 'c1':'' "  class="main1" style="border:black solid; text-align: center; ">
+    <h1  appHighlight style="color: white;">WITHDRAWAL FORM</h1>
+
+    
+    <label for="acc">Account number</label>
+    <br>
+    <input type="text" formControlName="acno1" name="acno1"  placeholder="acno" id="acc">
+    <br>
+    <div *ngIf="(this.withdrawalForm.get('acno1')?.touched || this.withdrawalForm.get('acno1')?.dirty) && this.withdrawalForm.get('acno1')?.errors"  id="error">Invalid Account number</div>
+    <br>
+    <label for="pass">Password</label>
+    <br>
+    <input type="password"formControlName="pswd1" name="pswd1" id="pass">
+    <br>
+    <div *ngIf="(this.withdrawalForm.get('pswd1')?.touched || this.withdrawalForm.get('pswd1')?.dirty) && this.withdrawalForm.get('pswd1')?.errors"  id="error">Invalid Password </div>
+    <br>
+    <label for="amount">Amount withdrawn</label>
+    <br>
+    <input type="text"  formControlName="amount1" name="amount1"   placeholder="amount1" id="amount">
+    <br><br>
+    <div *ngIf="(this.withdrawalForm.get('amount1')?.touched || this.withdrawalForm.get('amount1')?.dirty) && this.withdrawalForm.get('amount1')?.errors"  id="error">Invalid </div>
+
+    <br>
+    <button type="submit" style="background-color: rgb(132, 223, 132);">Withdrawal</button>
+    <br>
+    
+ 
+</div>
+
+</form>
+
+<!-- PARENT TO CHILD COMMUNICATION -->
+<br>
+<!-- PROP BINGING [item]  and  event binding (ondelete) --> 
+<app-delete-confirmation (onCancel)="onCancel($event)" (onDelete)="onDelete($event)" [item]="acno"></app-delete-confirmation>
+<br>
+
+<button   (click)= " deleteFromParent()" class="btn btn-danger" id="btn1">DELETE</button>
+
+</div>
+
+
+<button  class="btn btn-primary" (click)="logout()">Logout</button>
+<!-- animation creaion -->
+<!-- <app-animation></app-animation> -->
+
+
+
+
+
+
+<!-- ANGULAR FORMS-
+   1)TEMPLATE DRIVEN ANGULAR FORMS- html created and then ts connected
+   2)MODAL DRIVEN ANGULAR FORMS
+           2.1) REACTIVE FORMS- to have validation in the web created by user - THRID PARTY LIB SO IMPORTED - REACTIVE FORMS MODULE in appmodule.ts
+                    so for creating a reactive forms- we have to do- 
+                        a)-import reactivr formmodule
+                        IN TS FILE-
+                        b)- form group - for creating this- FORM BUILDER(private fb:formbuilder)  is needed- so this is injected in register .ts file- registerform= this.fb.group({
+                              (form array is made for the model from we are going to create)
+                            uname=['']
+                            acno=['']
+                            pswd=['']
+                        })
+                    c)- form array
+                    IN HTML PAGE
+                    d)- form controlname - then in html page- in form tag- <form (formGroup)="registerform   and also change ngmodel to formControlName="uname"-->
+
+
+                        <!-- FOR VALIDATING- ANGULAR VALIDATORS PAGE GOOGLE
+                        
+                        a) For String value- we use PATTERN
+                                         - uname=['',[Validators.required,Validators.pattern('[a-zA-Z]*')]]
+                                        ..for validating this- in register il if condtn is put-->
+
+<!-- ANGULAR DIRECTIVES
+     1) Component directive - 
+     2) Structural directives - used for-  IN DOM, HTML page - to add or remove new component- SYNTAX - *
+                 3 TYPE OF STRUCTURAL 
+                         i) ngIf  - based on any condtn- elemnt aadded or removed - 
+                                    Syntax - *ngIf = "condition" - 
+                                    in html page ngif is used 
+                       
+                                
+                    - so in reg.ts filed if condtn is applied for checking error
+                    - then in reg.html ppage- in div for error-  we use *ngIf= "condtn"
+                    - here to display this error div- to confd=tn - if the user click that filed or if value is chsnged- 
+                                - so for that- *ngIf=(this.regform.get('uname')?touched ||(OR) (&&) this.regform.get('uname')?dirty) [touched- for while clicking errro popos, dirty prop-  whle value is changed]  && this.regform.get('uname')?error)
+                      
+                      
+                       ii)  ngFor  - for array iterating 
+      3) Attribute directives- styling in the dom - making invisible of forms while delete button clicked- use [ngClass] = " acno? 'c1':''  "  in the html page of dashbrd and the in css file style .c1 - ac to acno this happens 
+                 
+       - We can create directive- in src- app - folder make- directive - open promt- ng g d highlight  
+       - THEN In highlight.ts- in construector (private el:elementRef) and selector ad paste to where highlight needed in html page
+       - then in highlight.ts - in construcotr{el:nativeleemnt.style.bacgrdColor="red"}  -->
+                      
+                        

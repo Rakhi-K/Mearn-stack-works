@@ -1,10 +1,10 @@
 //Polymorphism...
 //for functn or class methos- the recent one is implemented for output
-// for this class maths(...args ) used
+//for this class maths(...args ) used
 
 
 
-//SINGLE INHERITANCE
+/////SINGLE INHERITANCE
 
 //Inheritance- ineheriting the prop from parent
 
@@ -42,7 +42,7 @@
 // child.phone()
 
 
-//Multiple inheritance not in js like subchild extends child,parent- not possible
+// //Multiple inheritance not in js like subchild extends child,parent- not possible
 
 //MULTILEVEL INHERITANCE
 // class Parent {
@@ -83,7 +83,7 @@
 
 
 
-//SUPER- USED for invoking parent - both parent and child output]
+// //SUPER- USED for invoking parent - both parent and child output]
 class Parent 
 {
     phone() {
