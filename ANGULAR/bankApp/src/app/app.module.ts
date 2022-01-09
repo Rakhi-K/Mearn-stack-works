@@ -29,7 +29,7 @@ import { AnimationComponent } from './animation/animation.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
     //BrowserAnimationModule
     
   ],
